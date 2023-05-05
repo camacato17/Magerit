@@ -8,33 +8,27 @@
 <!DOCTYPE html>
 <html>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        </head>
-        <body>
-            <div class="container" mt-5>
-                <div class="row">
-                    <div class="col-sm">
-                <form>
-                <h1>inicio de sesion</h1>
-                
-                   <div class="username" >
-                        <label>Correo</label>
-                        <input type="text" name="usuario" placeholder="Escriba su correo">
-                   </div>
-                
-                <div class="password">
-                    <label>Contraseña</label>
-                    <input type="password" name="contraseña" placeholder="Escriba su usuario">
-                </div>
-                
-                <button type="submit" class="btn btn-primary">Iniciar sesion</button>  
-                <button type="submit" class="btn btn-primary">Registrar</button> 
-  
-              </form>  
-             </div>
-           </div>
-
-        </div>
-    </body>
+        <title>JS</title>
+        <link rel="stylesheet" href="Estilos.css">
+ </head>
+<body>
+    <div class="formulario">    
+     <h1>Iniciar Sesion</h1>
+    <form class="post" >
+       
+         <div class="usuario">
+             <input type="text" name="Campotxt_correo" placeholder="correo electronico">
+         </div>
+         
+         <div class="usuario">
+         <input type="password" name="Campotxt_contraseña" Placeholder="Contraseña">
+         </div>
+        <div class="olvidar">¿Olvido su contraseña?</div>
+         <input type="submit" value="Iniciar Sesion" class="button">
+         <div class="Registrarse">
+         ¿No tienes una cuenta? <a class="link" href="registrarse.jsp">Registrate </a>
+         </div>
+     </div>
+    </form>
+</body>
 </html>
