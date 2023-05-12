@@ -3,7 +3,9 @@ body {
     padding: 0;
     font-family: -apple-system,BlinkMacSystemFont,'segoe UI',Roboto Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue','sans-serif';
     height: 100vh;
-    background: url(imagenes/fondo.jpg);
+    background: url(imagenes/fondo.jpg)no-repeat center center fixed;
+    background-size: cover;
+    overflow:hidden;
 }
 .formulario{
    position: absolute;
@@ -107,5 +109,7 @@ input[type="submit"]:hover{
     
 }
 .formulario h4{
-    margin: 15px;
+    margin: 30px;
+    font-size: 15px;
+    font-family: sans-serif;
 }

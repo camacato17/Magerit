@@ -12,23 +12,54 @@
         <link rel="stylesheet" href="Estilos.css">
  </head>
 <body>
+    
+    
+    <% 
+       if(request.getAttribute("code") != null){
+        if(Integer.parseInt (request.getAttribute("code").toString())== 200){
+     %>
+     <script> 
+      alert("Usuario Verificado, Inicia sesion");
+     </script>
+     <% }if(Integer.parseInt (request.getAttribute("code").toString())== 500){%>
+      <script>
+      alert("500 proceso erroneo, digite usuario y contraseña valida, existente");
+      </script>
+    <%}   %>
+    <% if(Integer.parseInt (request.getAttribute("code").toString())== 300){ %>
+     <script> 
+      alert("300 proceso exitoso, Usuario verificado, inicie sesion");
+     </script>
+     <% } %>
+     <% if(Integer.parseInt (request.getAttribute("code").toString())== 400){ %>
+     <script> 
+      alert("400, Usuario registrado");
+     </script>
+     <% }} %>
+    
     <div class="formulario">    
      <h1>Iniciar Sesion</h1>
-    <form class="post" >
+     <form class="post" action="CuentaControlador">
        
          <div class="usuario">
-             <input type="text" name="Campotxt_correo" placeholder="correo electronico">
+             <input type="text" name="Campotxt_correo" placeholder="corrreo@gmail.com" required=""
+                    pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
          </div>
          
          <div class="usuario">
-         <input type="password" name="Campotxt_contraseña" Placeholder="Contraseña">
+         <input type="password" name="Campotxt_contraseña" placeholder="contraseña min 6 caracteres"required=""
+                minlength="6">
          </div>
+         
         <div class="olvidar">¿Olvido su contraseña?</div>
-         <input type="submit" value="Iniciar Sesion" class="button">
+        
+         <input name="Boton_login" type="submit" value="Iniciar Sesion" class="button">
+         
          <div class="Registrarse">
          ¿No tienes una cuenta? <a class="link" href="registrarse.jsp">Registrate </a>
          </div>
+         
+      </form>
      </div>
-    </form>
 </body>
 </html>
